@@ -4,6 +4,7 @@ pipeline {
                  stage('One') {
                  steps {
                     javac server.js	        
+                    java server                
                  }
                  }
                  stage('Two') {
