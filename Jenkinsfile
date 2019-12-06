@@ -13,11 +13,8 @@ pipeline {
         }                                            
     }
       }
-               
-         stage('Build image') {
-          def app = docker.build("coursework_2")
-    }
-                  
+
+           
                  stage('Two') {
                  steps {
                     input('Do you want to proceed?')
