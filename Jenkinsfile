@@ -3,8 +3,7 @@ pipeline {
          stages {
                  stage('One') {
                  steps {
-                    javac server.js	        
-                    java server                
+                    javac server.js	                        
                  }
                  }
                  stage('Two') {
