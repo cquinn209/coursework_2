@@ -15,7 +15,7 @@ pipeline {
       }
 
            
-                 stage('Two') {
+                 
             
                           
                           node {
@@ -53,31 +53,10 @@ pipeline {
             app.push("latest")
         }
     }
-}
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
+
+               
                  }
                 
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   
                   stage('Three') {
                  when {
