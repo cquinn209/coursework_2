@@ -1,7 +1,8 @@
 pipeline {
-          node {
+          
          agent any
-         stages {
+           def app
+          stages {
                   
                   stage('Sonarqube') {
                    environment {
@@ -16,7 +17,7 @@ pipeline {
       }
  
     
-    def app
+  
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
@@ -50,7 +51,7 @@ pipeline {
             app.push("latest")
         }
     }
-     }
+     
                
                   
                   stage('Three') {
