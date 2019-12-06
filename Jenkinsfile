@@ -1,11 +1,7 @@
 pipeline {
          agent any
          stages {
-                 stage('One') {
-                 steps {
-                    javac server.js	                        
-                 }
-                 }
+                
                   
                   stage('Sonarqube') {
     environment {
