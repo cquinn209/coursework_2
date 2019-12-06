@@ -27,7 +27,7 @@ pipeline {
           docker.build registry + ":$BUILD_NUMBER"
         }
       }
-  
+   }
                
                   
                   stage('Three') {
