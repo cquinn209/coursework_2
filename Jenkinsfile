@@ -15,7 +15,7 @@ pipeline {
       }
                
          stage('Build image') {
-          app = docker.build("coursework_2")
+          def app = docker.build("coursework_2")
     }
                   
                  stage('Two') {
