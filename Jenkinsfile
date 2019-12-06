@@ -13,7 +13,7 @@ pipeline {
         }        
                                       
     }
-}
+      }
                 stage('Build image') {   
         app = docker.build("coursework_2")
     }
