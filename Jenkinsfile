@@ -17,7 +17,7 @@ pipeline {
       }
  
     
-  node {
+  agent {
     def app
 
     stage('Clone repository') {
@@ -52,7 +52,7 @@ pipeline {
             app.push("latest")
         }
     }
-     
+  }
                
                   
                   stage('Three') {
@@ -87,4 +87,4 @@ pipeline {
                            }
               }
 }
-}
+
