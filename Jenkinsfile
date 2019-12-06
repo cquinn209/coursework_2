@@ -1,7 +1,7 @@
 pipeline {
           
          agent any
-           def app
+        
           stages {
                   
                   stage('Sonarqube') {
