@@ -53,7 +53,7 @@ pipeline {
             app.push("latest")
         }
     }
-  }
+  
                
                   
                   stage('Three') {
