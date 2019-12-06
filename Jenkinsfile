@@ -13,12 +13,8 @@ pipeline {
         }                                            
     }
       }
-
-           
-                 
-            
-                          
-                          node {
+ 
+     node {
     def app
 
     stage('Clone repository') {
@@ -53,10 +49,8 @@ pipeline {
             app.push("latest")
         }
     }
-
+     }
                
-                 }
-                
                   
                   stage('Three') {
                  when {
