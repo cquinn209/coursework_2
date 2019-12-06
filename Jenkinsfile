@@ -10,16 +10,10 @@ pipeline {
         steps {
         withSonarQubeEnv('sonarqube') {
             sh "${scannerHome}/bin/sonar-scanner"
-        }        
-                                      
+        }                                            
     }
       }
-   
-            
-    stage('Clone repository') {
-        checkout scm
-    }
-
+               
     stage('Build image') {
      app = docker.build("getintodevops/hellonode")
     }
