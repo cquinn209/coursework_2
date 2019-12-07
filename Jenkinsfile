@@ -1,5 +1,3 @@
-
-
 node {
     def app
 
@@ -35,20 +33,8 @@ node {
             app.push("latest")
         }
     }
-}
 
 
-
-
-
-
-
-pipeline {
-          
- 
-         agent any
-        
-          stages {
                   
                   stage('Sonarqube') {
                    environment {
@@ -133,7 +119,7 @@ pipeline {
                            }
                            }
               }
-}
+
 
 
 
