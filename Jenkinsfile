@@ -1,23 +1,4 @@
-pipeline {
-          
- 
-         agent any
-        
-          stages {
-                  
-                  stage('Sonarqube') {
-                   environment {
-        scannerHome = tool 'SonarQubeScanner'
-    }    
-                       
-        steps {
-        withSonarQubeEnv('sonarqube') {
-            sh "${scannerHome}/bin/sonar-scanner"
-        }                                            
-    }
-      }
-                    
-             node {
+node {
     def app
 
     stage('Clone repository') {
@@ -52,41 +33,4 @@ pipeline {
             app.push("latest")
         }
     }
-}       
-                    
-  
-               
-                  
-                  stage('Three') {
-                 when {
-                       not {
-                            branch "master"
-                       }
-                 }
-                 steps {
-                       echo "Hello"
-                 }
-                 }
-                 stage('Four') {
-                 parallel { 
-                            stage('Unit Test') {
-                           steps {
-                                echo "Running the unit test..."
-                           }
-                           }
-                            stage('Integration test') {
-                              agent {
-                                    docker {
-                                            reuseNode true
-                                            image 'ubuntu'
-                                           }
-                                    }
-                              steps {
-                                echo "Running the integration test..."
-                              }
-                           }
-                           }
-                           }
-              }
 }
-
