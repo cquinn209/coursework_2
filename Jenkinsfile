@@ -55,7 +55,7 @@ pipeline {
                            }
               }
 }
-}
+
 
 
 node {
@@ -93,3 +93,4 @@ node {
             app.push("latest")
         }
     }
+}
