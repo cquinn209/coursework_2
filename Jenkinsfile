@@ -88,7 +88,7 @@ pipeline {
                            }
                            }
               }
-}
+
 
 
 
@@ -130,4 +130,5 @@ node {
             app.push("latest")
         }
     }
+}
 }
